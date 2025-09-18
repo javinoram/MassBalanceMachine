@@ -49,4 +49,19 @@ regions/Norway/data/
 *.tox/
 *.tox
 
+<<<<<<< HEAD
 logs/
+=======
+
+.DS_Store
+regions/Patagonia/data/
+regions/Patagonia/era5land/
+regions/Patagonia/models/
+regions/Patagonia/OGGM/
+regions/Patagonia/grid/
+regions/Patagonia/rgiv6/
+regions/Patagonia/*.png
+regions/Patagonia/.ipynb_checkpoints
+regions/Patagonia/era5land-antarc/
+venv/
+>>>>>>> 51a27e7 (18/09/2025 feat:rebase)
