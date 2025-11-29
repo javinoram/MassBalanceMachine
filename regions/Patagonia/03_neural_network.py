@@ -68,7 +68,9 @@ dataset = mbm.data_processing.AggregatedDataset(
     cfg,
     features=features,
     metadata=metadata,
-    targets=y_train
+    targets=y_train,
+    months_head_pad = ["jan_", "feb_", "mar_", "apr_"],
+    months_tail_pad = ["sep_", "oct_", "nov_", "dec_"],
 )
 splits = dataset.mapSplitsToDataset(splits)
 
@@ -91,4 +93,5 @@ best_estimator = custom_nn.param_search.best_estimator_
 print("Best parameters:\n", best_params)
 print("Best score:\n", custom_nn.param_search.best_score_)
 
+custom_nn.initialize()
 custom_nn.save_model("nn_Pa.pkl") 

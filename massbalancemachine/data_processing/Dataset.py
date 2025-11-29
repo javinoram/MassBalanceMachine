@@ -266,7 +266,6 @@ class Dataset:
         """
         return os.path.join(self.data_dir, f"{self.region}_{feature_type}.csv")
 
-<<<<<<< HEAD
     def _copy_padded_month_columns(
         self, df: pd.DataFrame, prefixes=("pcsr",), overwrite: bool = False
     ) -> pd.DataFrame:
@@ -293,14 +292,13 @@ class Dataset:
                 else:
                     df[dst] = np.nan
         return df
-=======
+    
     def clean_nonvalid_glaciers(self):
         """
         Clean the glaciers with non valid rgi id.
         """
         self.data.dropna(subset=["RGIId", "aspect", "slope"],
                          inplace=True)
->>>>>>> 51a27e7 (18/09/2025 feat:rebase)
 
     @staticmethod
     def _clean_data(data: pd.DataFrame) -> pd.DataFrame:
